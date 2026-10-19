@@ -2,13 +2,9 @@ fun main() {
     val ingredients = arrayOf("Лук", "Картошка", "Капуста", "Фасоль", "Мясо")
     print("Введите ингредиент: ")
     val ingredient = readln()
-    for (item in ingredients) {
-        if (item == ingredient) {
-            println("Ингредиент $ingredient в рецепте есть")
-            return
-        }
-
+    if (ingredient in ingredients) {
+        println("Ингредиент $ingredient в рецепте есть")
+    } else {
+        println("Такого ингредиента в рецепте нет")
     }
-    //dfdf
-    println("Такого ингредиента в рецепте нет")
 }
