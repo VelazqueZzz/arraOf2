@@ -1,16 +1,10 @@
 fun main() {
-    val ingredients = arrayOf("Лук", "Картошка", "Капуста", "Фасоль", "Мясо")
-    println(ingredients.joinToString (", "))
-println()
-    print("Какой ингредиент заменить: ")
-    val old = readln()
-    val foundIndex = ingredients.indexOf(old)
-    if (foundIndex == -1) {
-        println("Ингредиента \"$old\" нет в списке.")
-        return
+    print("Сколько ингредиентов планируете ввести: ")
+    val count = readln().toInt()
+    val ingredients = Array(count) { "" }
+    for (i in 0 until count) {
+        print("Ингредиент ${i + 1}: ")
+        ingredients[i] = readln()
     }
-    print("На какой заменить: ")
-    val new = readln()
-    ingredients.set(foundIndex, new)
-    println("Готово! Вы сохранили следующий список: ${ingredients.joinToString (", ")}")
+    println("Ваши ингредиенты: ${ingredients.joinToString(", ")}")
 }
