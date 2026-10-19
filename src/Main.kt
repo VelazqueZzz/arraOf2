@@ -1,14 +1,10 @@
 fun main() {
-    val ingredients = arrayOf("Лук", "Картошка", "Капуста", "Фасоль", "Мясо")
-    print("Введите ингредиент: ")
-    val ingredient = readln()
-    for (item in ingredients) {
-        if (item == ingredient) {
-            println("Ингредиент $ingredient в рецепте есть")
-            return
-        }
-
+    print("Сколько ингредиентов планируете ввести: ")
+    val count = readln().toInt()
+    val ingredients = Array(count) { "" }
+    for (i in 0 until count) {
+        print("Ингредиент ${i + 1}: ")
+        ingredients[i] = readln()
     }
-    //dfdf
-    println("Такого ингредиента в рецепте нет")
+    println("Ваши ингредиенты: ${ingredients.joinToString(", ")}")
 }
