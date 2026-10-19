@@ -7,8 +7,6 @@ fun main() {
             println("Ингредиент $ingredient в рецепте есть")
             return
         }
-
     }
-    //dfdf
     println("Такого ингредиента в рецепте нет")
 }
